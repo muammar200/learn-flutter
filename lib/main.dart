@@ -1,31 +1,89 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BebasApp());
+  runApp(MyApp());
 }
 
-class BebasApp extends StatelessWidget {
-  const BebasApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-            title: Text('Aplikasi Pertamaku',
-                style: TextStyle(color: Colors.white)),
-            centerTitle: true,
-            // backgroundColor: Color.fromARGB(255, 81, 165, 255),
-            backgroundColor: Colors.blue.shade500,
+        home: Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue[300],
+        title: Center(
+          child: Text(
+            "Judul",
+            style: TextStyle(color: Colors.white),
           ),
-          body: Center(
-            // child: Image(image: AssetImage("assets/images/image1.jpg")),
-            //     child: Image(
-            //   image: NetworkImage("https://picsum.photos/id/237/200/300"),
-            // )
-            // child: Image.network("https://picsum.photos/id/237/200/300"),
-            child: Image.asset("assets/images/image1.jpg"),
-          )),
-    );
+        ),
+      ),
+      body: GridView(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            childAspectRatio: 1 / 3),
+        padding: EdgeInsets.all(10),
+        children: [
+          Container(
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.blue,
+          ),
+          Container(
+            color: Colors.purple,
+          ),
+          Container(
+            color: Colors.orange,
+          ),
+          Container(
+            color: Colors.pink,
+          ),
+          Container(
+            color: Colors.yellow,
+          ),
+          Container(
+            color: Colors.green,
+          ),
+          Container(
+            color: Colors.blue,
+          ),
+          Container(
+            color: Colors.purple,
+          ),
+          Container(
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.grey,
+          ),
+          Container(
+            color: Colors.black,
+          ),
+          Container(
+            color: Colors.white,
+          ),
+          Container(
+            color: Colors.blue,
+          ),
+          Container(
+            color: Colors.red,
+          ),
+          Container(
+            color: Colors.amber,
+          ),
+          Container(
+            color: Colors.blue,
+          ),
+          Container(
+            color: Colors.red,
+          ),
+        ],
+      ),
+    ));
   }
 }
